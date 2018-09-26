@@ -1,4 +1,177 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Arial Verdana", Monospace, Sans-serif;
 }
+
+/* ------------------- Chat general --------------------- */
+
+.chat_window {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 400px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #dddddd;
+}
+
+/* ------------------- Chat header ---------------------- */
+
+.head_chat {
+  display: flex;
+  background-color: aqua;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  background-image: linear-gradient(to right, #aa00ff, #ae00ff, #c700ff, #e500ff);
+}
+
+.photo_dest {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+
+.profil_dest {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
+
+.statut {
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background-color: #45f442;
+}
+
+.name_dest {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  vertical-align: middle;
+  margin-left: 1%;
+  color: #ffffff;
+  
+}
+
+.menu_chat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16%;
+  cursor: pointer;
+}
+
+/* ------------------- Chat footer ---------------------- */
+
+.formulaire{
+  display: flex;
+  align-self: end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.mess_area{
+  display: flex;
+  justify-content: space-between;
+  border-style: solid;
+  border-color: orange;
+  border: 15px;
+
+}
+.text_area {
+  width: 100%;
+}
+
+.champ {
+  width: 100%;
+}
+
+.smiley{
+  flex: 0 0 auto;
+  width: 25px;
+  margin-left: 10px;
+}
+.send{
+  flex: 0 0 auto;
+  width: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+/* --------------- Annimations icones css ----------------- */
+
+.icon, .icon:before, .icon:after, .icon i, .icon i:before, .icon i:after { 
+  transition: all 0.4s ease;
+}
+
+/* ------------------- Icones css <3 ---------------------- */
+
+.menu.icon {
+  color: #ffffff;
+  position: relative;
+  width: 38%;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.menu.icon:before {
+  content: '';
+  position: absolute;
+  top: -900%;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+}
+
+.menu.icon:after {
+  content: '';
+  position: absolute;
+  top: 900%;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+}
+
+.close.icon {
+  color: #ffffff;
+  position: relative;
+  width: 40%;
+  height: 1px;
+}
+
+.close.icon:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.close.icon:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+
+
+/* ---------------------- Zone de test ---------------- */
