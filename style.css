@@ -72,6 +72,31 @@
   cursor: pointer;
 }
 
+/* ------------------ Chat content ---------------------- */
+
+.messages{
+  color: pink;
+  height: 600px;
+  width: 200px;
+}
+
+.mess1{
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.txt1{
+  background-color: black;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.profil1{
+  width: 30px;
+  flex: 0 0 auto;
+}
+
 /* ------------------- Chat footer ---------------------- */
 
 .formulaire{
