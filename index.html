@@ -2,8 +2,9 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Titre de la page</title>
+  <title>Chatbot</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/flavicon.png">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
 
     <div class="head_chat">
         <div class="photo_dest">
-        <img class="profil_dest" src="img/VAUTRIN-Amandine-2.jpg">
+        <img class="profil_dest" src="img/VAUTRIN-Amandine-2.jpg" alt="Photo de profil du bot">
         <div class="statut"></div>
         </div>
 
@@ -23,9 +24,8 @@
         </div>
         
         <div class="menu_chat">
-            <button class="menu icon"></button>
+            <button class="menu icon" aria-label="Ouvre le menu"></button>
         </div>
-        
     </div>
 
       <!-- ------------------- Chat content ---------------------- -->
@@ -33,11 +33,11 @@
     <div class="messages">
         <div class="message_bot">
             <div class="profil_bot">
-                <img class='photo_bot' src="img/VAUTRIN-Amandine-2.jpg">
+                <img class='photo_bot' src="img/VAUTRIN-Amandine-2.jpg" alt="Photo de profil du bot">
             </div>
             <div class="txt_bot">
-                Bienvenue,
-                je suis un bot, tu peux me poser des question et je m'éforcerais d'y répondre.
+                Bienvenue,<br>
+                je suis un bot, tu peux me poser des questions et je m'éforcerais d'y répondre.
             </div>
         </div>
     
@@ -48,12 +48,12 @@
     <form class="foot_chat">
         <div class="text_area">
             <textarea placeholder="Écris ici !" id="text" class="autoExpand"></textarea>
-                <button type="button" aria-level="Menu des smileys" class="smile_menu_button">
+                <button type="button" aria-level="Ouvre l'onglet des smileys" class="smile_menu_button">
                     <img src="img/happiness.svg">
                 </button>
                 <div class="smile_popup hidden">
-                    <button type="button" id="smiley_1">😊</button>
-                    <button type="button" id="smiley_2">🤣</button>
+                    <button type="button" aria-label="Ajoute un smiley avec les yeux smiley">😊</button>
+                    <button type="button" aria-label="Ajoute l'émoji rolling on the floor laughing" id="smiley_2">🤣</button>
                     <button type="button" id="smiley_3">😂</button>
                     <button type="button" id="smiley_4">😜</button>
                     <button type="button" id="smiley_5">😒</button>

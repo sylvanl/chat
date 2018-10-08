@@ -97,7 +97,7 @@ button {
 .message_bot{
   display: flex;
   align-items: flex-end;
-  width: 70%;
+  max-width: 70%;
   margin: 5px 0 15px 0;
 }
 
@@ -126,7 +126,7 @@ button {
 
 .txt_send{
   align-self: flex-end;
-  width: 70%;
+  max-width: 70%;
   color: #ffffff;
   background-color: #c700ff;
   border: #dddddd solid 0.6px;

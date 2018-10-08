@@ -12,6 +12,7 @@ $menu.addEventListener('click', function () {
 
 //--------------------- Smiley popup ------------------------
 
+//var body = document.querySelector('wrapper');
 var $smile_menu = document.querySelector('.smile_menu_button');
 var $smile_popup = document.querySelector('.smile_popup');
 var $arrow_down = document.querySelector('.arrow_down');
@@ -19,24 +20,32 @@ var $arrow_down = document.querySelector('.arrow_down');
 $smile_menu.addEventListener('click', function () {
    $smile_popup.classList.toggle('hidden');
    $arrow_down.classList.toggle('hidden');
-   $smile_popup.classList.toggle('');
-   $arrow_down.classList.toggle('');
 });
+
+/*body.addEventListener('click', function () {
+    if ( $smile_popup.className != 'hidden' ) {
+        console.log('ça marche :)');
+    };
+});*/
 
 //----------------- Add smiley to textarea ------------------
 
 var $textarea = document.querySelector('.text_area textarea');
-var $smiley_1 = document.querySelector('#smiley_1');
 
-$smiley_1.addEventListener('click', function () {
-    $textarea.value += '😊';
+$smile_popup.addEventListener('click', function () {
+    let target = event.target;
+
+    if(target.type == 'button') {
+        $textarea.value += target.textContent;
+    };
 });
 
-var $textarea = document.querySelector('.text_area textarea');
-var $smiley_2 = document.querySelector('#smiley_2');
+//--------------- ctr + enter => new line --------------------
 
-$smiley_2.addEventListener('click', function () {
-    $textarea.value += '🤣';
+$textarea.addEventListener('keydown', function() {
+    if( event.ctrlKey && event.keyCode == 13 ) {
+        $textarea.value += '\n';
+    };
 });
 
 //--------------------- Send message -------------------------
@@ -44,13 +53,25 @@ $smiley_2.addEventListener('click', function () {
 var $send = document.querySelector('.send');
 var $messages = document.querySelector('.messages');
 
+$textarea.addEventListener("keydown", function(event) {
+    if (event.keyCode == 13) {
+        event.preventDefault();
+        if( !event.ctrlKey ) {
+            $send.click();
+        };
+    };
+  });
+
 $send.addEventListener('click', function () {
-    var $newDiv = document.createElement('div');
 
-    $messages.appendChild($newDiv);
-    $newDiv.classList.add('txt_send');
+    if ( $textarea.value != '' ) {
+        var $newDiv = document.createElement('div');
+        var output = $textarea.value.replace(/\n/g, "<br />");  
 
-    $newDiv.innerHTML = $textarea.value;
-    $textarea.value = '';
-
+        $messages.appendChild($newDiv);
+        $newDiv.classList.add('txt_send');
+        
+        $newDiv.innerHTML = output;
+        $textarea.value = '';
+    };
 });
