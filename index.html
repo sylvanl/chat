@@ -25,6 +25,8 @@
         
         <div class="menu_chat">
             <button class="menu icon" aria-label="Ouvre le menu"></button>
+            <div class='menu_tab hidden'>
+            </div>
         </div>
     </div>
 
@@ -40,7 +42,6 @@
                 je suis un bot, tu peux me poser des questions et je m'éforcerais d'y répondre.
             </div>
         </div>
-    
     </div>
         
        <!-- ------------------- Chat footer ---------------------- -->   
@@ -53,54 +54,54 @@
                 </button>
                 <div class="smile_popup hidden">
                     <button type="button" aria-label="Ajoute un smiley avec les yeux smiley">😊</button>
-                    <button type="button" aria-label="Ajoute l'émoji rolling on the floor laughing" id="smiley_2">🤣</button>
-                    <button type="button" id="smiley_3">😂</button>
-                    <button type="button" id="smiley_4">😜</button>
-                    <button type="button" id="smiley_5">😒</button>
-                    <button type="button" id="smiley_6">😢</button>
-                    <button type="button" id="smiley_7">🙃</button>
-                    <button type="button" id="smiley_8">😀</button>
-                    <button type="button" id="smiley_9">😁</button>
-                    <button type="button" id="smiley_10">😍</button>
-                    <button type="button" id="smiley_11">😘</button>
-                    <button type="button" id="smiley_12">😆</button>
-                    <button type="button" id="smiley_13">🤔</button>
-                    <button type="button" id="smiley_14">😃</button>
-                    <button type="button" id="smiley_15">😝</button>
-                    <button type="button" id="smiley_16">🤤</button>
-                    <button type="button" id="smiley_17">🤔</button>
-                    <button type="button" id="smiley_18">🤨</button>
-                    <button type="button" id="smiley_19">😏</button>
-                    <button type="button" id="smiley_20">🤑</button>
-                    <button type="button" id="smiley_21">😫</button>
-                    <button type="button" id="smiley_22">😗</button>
-                    <button type="button" id="smiley_23">😚</button>
-                    <button type="button" id="smiley_24">🤗</button>
-                    <button type="button" id="smiley_25">🤩</button>
-                    <button type="button" id="smiley_26">😋</button>
-                    <button type="button" id="smiley_27">🤐</button>
-                    <button type="button" id="smiley_28">🤢</button>
-                    <button type="button" id="smiley_29">💖</button>
-                    <button type="button" id="smiley_30">🧡</button>
-                    <button type="button" id="smiley_31">💛</button>
-                    <button type="button" id="smiley_32">💙</button>
-                    <button type="button" id="smiley_33">💚</button>
-                    <button type="button" id="smiley_34">💜</button>
-                    <button type="button" id="smiley_35">🖤</button>
-                    <button type="button" id="smiley_36">🍕</button>
-                    <button type="button" id="smiley_37">🍔</button>
-                    <button type="button" id="smiley_38">🌭</button>
-                    <button type="button" id="smiley_39">🥗</button>
-                    <button type="button" id="smiley_40">🥙</button>
-                    <button type="button" id="smiley_41">🍜</button>
-                    <button type="button" id="smiley_42">🎁</button>
-                    <button type="button" id="smiley_43">💪</button>
-                    <button type="button" id="smiley_44">👌</button>
-                    <button type="button" id="smiley_45">✌</button>
-                    <button type="button" id="smiley_46">🤞</button>
-                    <button type="button" id="smiley_47">👍</button>
-                    <button type="button" id="smiley_48">🙌</button>
-                    <button type="button" id="smiley_49">👀</button>
+                    <button type="button" aria-label="Ajoute l'émoji rolling on the floor laughing">🤣</button>
+                    <button type="button">😂</button>
+                    <button type="button">😜</button>
+                    <button type="button">😒</button>
+                    <button type="button">😢</button>
+                    <button type="button">🙃</button>
+                    <button type="button">😀</button>
+                    <button type="button">😁</button>
+                    <button type="button">😍</button>
+                    <button type="button">😘</button>
+                    <button type="button">😆</button>
+                    <button type="button">🤔</button>
+                    <button type="button">😃</button>
+                    <button type="button">😝</button>
+                    <button type="button">🤤</button>
+                    <button type="button">🤔</button>
+                    <button type="button">🤨</button>
+                    <button type="button">😏</button>
+                    <button type="button">🤑</button>
+                    <button type="button">😫</button>
+                    <button type="button">😗</button>
+                    <button type="button">😚</button>
+                    <button type="button">🤗</button>
+                    <button type="button">🤩</button>
+                    <button type="button">😋</button>
+                    <button type="button">🤐</button>
+                    <button type="button">🤢</button>
+                    <button type="button">💖</button>
+                    <button type="button">🧡</button>
+                    <button type="button">💛</button>
+                    <button type="button">💙</button>
+                    <button type="button">💚</button>
+                    <button type="button">💜</button>
+                    <button type="button">🖤</button>
+                    <button type="button">🍕</button>
+                    <button type="button">🍔</button>
+                    <button type="button">🌭</button>
+                    <button type="button">🥗</button>
+                    <button type="button">🥙</button>
+                    <button type="button">🍜</button>
+                    <button type="button">🎁</button>
+                    <button type="button">💪</button>
+                    <button type="button">👌</button>
+                    <button type="button">✌</button>
+                    <button type="button">🤞</button>
+                    <button type="button">👍</button>
+                    <button type="button">🙌</button>
+                    <button type="button">👀</button>
                 </div>
                 <div class="arrow_down hidden"></div>
         </div>
