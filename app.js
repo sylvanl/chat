@@ -76,13 +76,19 @@ $send.addEventListener('click', function () {
 
     if ( $textarea.value != '' ) {
         var $new_div = document.createElement('div');
-        var output = $textarea.value.replace(/\n/g, "<br />");  
+        var output = $textarea.value.replace(/\n/g, "<br />");
+        var $div_date = document.createElement('div');
+        var $date= new Date();
 
         $messages.appendChild($new_div);
         $new_div.classList.add('txt_send');
         
         $new_div.innerHTML = output;
         $textarea.value = '';
+
+        $messages.appendChild($div_date);
+        $div_date.classList.add('date');
+        $div_date.innerHTML = ($date.getHours()+":"+$date.getMinutes());
 
         var $typing = document.createElement('img');
         $messages.appendChild($typing);
